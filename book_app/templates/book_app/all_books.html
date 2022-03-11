@@ -1,18 +1,12 @@
 {% extends 'base.html' %}
-{% load static %}
-
-{% block css_additional %}
-    <link rel="stylesheet" href="{% static 'book_app/css/all_books.css' %}">
-{% endblock %}
-
 
 {% block title %} Books {% endblock title %}
 
 {% block content %}
     <h2>List Books</h2>
     <ul>
-        {% for book in books %}
-            <li><a href="{{ book.get_url }}">{{ book.title }}</a> {{ book.author }}</li>
-        {% endfor %}
+    {% for book in books %}
+        <li><a href="{{ book.get_url }}">{{ book.title }}</a> {{ book.author }}</li>
+    {% endfor %}
     </ul>
 {% endblock content %}
