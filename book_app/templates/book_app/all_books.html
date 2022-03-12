@@ -12,7 +12,7 @@
     <h2>List Books</h2>
     <ul>
         {% for book in books %}
-            <li><a href="{{ book.get_url }}">{{ book.title }}</a> {{ book.author }}</li>
+            <li><a href="{{ book.get_url }}">{{ book.title }}</a></li>
         {% endfor %}
     </ul>
 {% endblock content %}
